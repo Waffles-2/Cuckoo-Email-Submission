@@ -1,10 +1,10 @@
 # Cuckoo-Email-Submission
 
-This repo aims to add functionality to Cuckoo Sandbox (specifically Cuckoo Modified which is now depricated) by taking emails from a specified email account using IMAP, determining the contents, and then submitting it to Cuckoo Sandbox. The scripts are quite obviously not optimised, but that is on a to do list.
+This repo aims to add functionality to Cuckoo Sandbox (specifically Cuckoo Modified which is now deprecated) by taking emails from a specified email account using IMAP, determining the contents, and then submitting it to Cuckoo Sandbox. The scripts are quite obviously not optimised, but that is on a to do list.
 
 Priority Order:
-- Sample submission via attachment (can take 1 or multiple attachemnts, inline attachments are ignored)
-- Hash value, qureies the SQLite database for previous reports (Only takes one of the following: MD5, SHA1, SHA256 or SHA512)
+- Sample submission via attachment (can take 1 or multiple attachments, inline attachments are ignored)
+- Hash value, queries the SQLite database for previous reports (Only takes one of the following: MD5, SHA1, SHA256 or SHA512)
 - URL, submits the URL to Cuckoo. This does not query the database for previous reports as malicious websites regularly change. 
 
 It should be noted that it only takes one of the above 3 per email therefore an email should not contain both attachments and hashes as it will only recognise the attachments.
